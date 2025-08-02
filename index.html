@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE LORE BULLETIN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background:url('https://i.postimg.cc/CdyvfdVk/Screenshot-2025-08-02-182157.png') no-repeat center center;
+      background-size: cover;
+      font-family: Georgia, serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 10px;
+    }
+    .bulletin {
+  width: 420px;
+  background: url('https://i.postimg.cc/rp68FNbw/Screenshot-2025-08-02-181926.png') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 0;
+}
+
+
+    .title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 4px;
+
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: rainbowShift 6s linear infinite;
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+    .tagline {
+  text-align: center;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 4px;
+  animation: bluePulse 6s infinite;
+}
+
+/* Animation keyframes */
+@keyframes bluePulse {
+  0%   { color: #4F8ACB; }   /* medium blue */
+  25%  { color: #1A3A5F; }   /* darker navy blue */
+  50%  { color: #A5D8FF; }   /* light icy blue */
+  75%  { color: #1A3A5F; }   /* darker navy blue again */
+  100% { color: #4F8ACB; }   /* back to medium blue */
+}
+
+    .issue {
+      text-align: center;
+      font-size: 10px;
+      color: #FFD700;
+      margin-bottom: 12px;
+    }
+
+@keyframes rainbowBorder {
+  0%   { border-color: #4B0000; }   /* Sky Blue */
+  25%  { border-color: #B22222; }   /* Light Green */
+  50%  { border-color: #FF4500; }   /* Golden Yellow */
+  75%  { border-color: #FF7F7F; }   /* Soft Orange */
+  100% { border-color: #FFC1C1; }   /* Loop back */
+}
+
+.headline {
+  background: #000f;
+  border: 3px solid #ccc;
+  border-top: 3px solid #ccc ;
+  border-bottom: 3px solid #ccc ;
+  border-image: none;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 0px ;
+  animation: rainbowBorder 6s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+    .headline h2 {
+      font-size: 13.5px;
+      color: white;
+      margin-bottom: 5px;
+    }
+    .author {
+      font-size: 9px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .headline img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border: 4px solid #ccc;
+      border-radius: 0px;
+      border-color: white;
+      margin-bottom: 6px;
+    }
+    .headline p {
+      font-size: 10px;
+      line-height: 1.4;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .row {
+      display: flex;
+      padding-top: 12px;
+      margin-top: 20px;
+      gap: 10px;
+      margin-bottom: 20px;\
+    }
+
+    .col-left { 
+  flex: 1.3;
+  background-image: url('https://i.postimg.cc/bJqvyvtV/Screenshot-2025-08-02-175636.png'); /* Replace with your actual image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #bbb;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+}
+
+
+    .col-right {
+      flex: 0.7;
+      background-image: url('https://i.postimg.cc/9fP7Y0HC/Screenshot-2025-08-02-180759.png'); /* Replace with your actual image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 2px solid #bbb;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 10px;
+    }
+
+    .section h3 {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+    .section img {
+      width: 100%;
+      border: 4px solid #ccc;
+      border-radius: 0px;
+      border-color: black;
+      margin: 4px 0 6px;
+    }
+    .section p {
+      font-size: 10px;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .poll-chart {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+    }
+
+.bottom-story {
+  padding-top: 12px;
+  margin-top: 20px;
+  position: relative;
+  background-image: url('https://i.postimg.cc/gkjKDV0s/Screenshot-2025-08-02-185839.png'); /* Replace with your actual image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Animated border */
+  border: 3px solid #bbb;
+  border-radius: 0px;
+  animation: borderPulse 6s infinite ease-in-out;
+}
+
+/* Keyframes to animate border color */
+@keyframes borderPulse {
+  0% {
+    border-color: #4facfe;
+  }
+  25% {
+    border-color: #00f2fe;
+  }
+  50% {
+    border-color: #43e97b;
+  }
+  75% {
+    border-color: #fbd786;
+  }
+  100% {
+    border-color: #4facfe;
+  }
+}
+
+
+.bottom-story h3 {
+  font-size: 16px;
+  margin: 0px 5px ;
+  color: black;
+  text-shadow:
+    -1px -1px 0 #FFFF33,
+     1px -1px 0 #FFFF33,
+    -1px  1px 0 #FFFF33,
+     1px  1px 0 #FFFF33;
+}
+
+.bottom-story img {
+  width: 180px; /* adjust size as needed */
+  border: 4px solid #ccc;
+  border-radius: 0px;
+  border-color: black;
+  float: right;
+  margin: 0px 4px 8px 12px; /* space around image */
+}
+
+.bottom-story p {
+  font-size: 10px;
+  line-height: 1.4;
+  margin: 3px 6px;
+}
+
+.extra-story {
+  position: relative;
+  padding-top: 12px;
+  margin-top: 20px;
+  background-image: url('https://i.postimg.cc/Sx0SypJM/Screenshot-2025-08-02-195008.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+   border: 3px solid #bbb;
+  border-radius: 0px;
+  animation: bordPulse 6s infinite ease-in-out;
+}
+
+/* Keyframes to animate border color */
+@keyframes bordPulse {
+  0% {
+    border-color: #7DF9FF;
+  }
+  25% {
+    border-color: #2B2D42;
+  }
+  50% {
+    border-color: #6C757D;
+  }
+  75% {
+    border-color: #9A4DFF;
+  }
+  100% {
+    border-color: #F8F9FA;
+  }
+}
+
+
+    .extra-story h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #7DF9FF;
+     text-shadow:
+     4px  4px 0 #2B2D42,
+     4px  4px 0 #2B2D42,
+     4px  4px 0 #2B2D42,
+     4px  4px 0 #2B2D42;
+    }
+    .extra-story video {
+  width: 180px; /* adjust size */
+  float: left; /* or right, based on your layout */
+  margin: 6px 10px 6px 4px;
+  border: 4px solid #ccc;
+  border-radius: 0px;
+}
+    .extra-story p {
+      font-size: 10px;
+      color: #F8F9FA;
+      line-height: 1.4;
+      margin: 2px 6px;
+    }
+
+.lightning-bulletin {
+  position: relative;
+  overflow: hidden;
+  width: 320px;     /* adjust width */
+  height: 20px;    /* adjust height */
+  border: 3px solid #2B2D42;
+  border-radius: 0px;
+  background: black;
+  margin: 10px auto;
+}
+
+.lightning-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(1.6) contrast(1.8);
+  pointer-events: none;
+}
+
+.lightning-text {
+  position: relative;
+  z-index: 1;
+  font-size: 10px;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  padding: 1px 10px 0;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="bulletin">
+    <div class="title">The LORE Bulletin</div>
+    <div class="tagline">The final page turns... a new world awaits.</div>
+    <div class="issue">Issue 007 | 15 August 2025</div>
+<hr style="border: none; border-top: 3px solid #000; margin: 24px 0 8px;" />
+
+    <div class="headline">
+      <h2>🛠️ Why It Took So Long</h2>
+      <div class="author">By The Owner</div>
+      <img src="https://i.postimg.cc/jdspd7Cr/Screenshot-2025-08-02-174144.png" alt="Event">
+      <p>They say good things take time—and our journey was no exception.</p>
+      <p>The road to release was filled with challenges. Our original server faced overwhelming lag and instability, making it unplayable for many. Despite our efforts to optimize, we realized the best path forward was to shut it down and rebuild from scratch.</p>
+      <p>But that wasn’t the end of it.</p>
+      <p>What followed was an unexpected setback: our server files were corrupted, wiping months of progress. And just when we thought we were back on track, we hit host availability issues, slowing development even further. On top of that, <b>player-side problems</b>—compatibility, crashes, and performance hiccups—demanded extra care and testing.</p>
+      <p>Still, we didn’t stop.</p>
+      <p>This delay wasn’t time lost—it was time spent ensuring that when the gates open, they open to something worth your time. The new server is stronger, smoother, and built for a longer journey.</p>
+    </div>
+<hr style="border: none; border-top: 3px solid #000; margin: 24px 0 8px;" />
+
+
+    <div class="row">
+      <div class="col-left section">
+        <h3>Claim Your Space, Rule Your World</h3>
+	<hr>
+        <img src="https://i.postimg.cc/6p6zvVNB/Screenshot-2025-08-02-175324.png" alt="Evidence Board">
+	<p>As we edge into the new era of the Lore Server, one of the most player-requested features is finally making its debut: <b>the Claim System</b>.</p>
+        <p>Players will now be able to claim plots of land as their own, protecting them from unwanted intruders, griefing, or accidental changes. Whether you're setting up a peaceful village, a complex redstone system, or a massive castle, your land is now <b>truly yours</b>.</p>
+        <pBut that's not all.</p>
+        <p>With the power of claims comes the ability to teleport directly to your claimed areas. No more long journeys or setting up temporary beds—<b>your base is just a command away</b>.</p>
+	<p>This system aims to empower creativity, protect builds, and give players the freedom to expand without worry. It’s all about making sure every player has a <b>home</b>, <b>a base</b>, and <b>a safe place to build their story</b>.</p>
+	<p>Welcome to the age of <b>true ownership</b>.</p>
+      </div>
+
+      <div class="col-right section">
+        <h3>The World Reshaped</h3>
+        <img src="https://i.postimg.cc/8cmX8NvS/Screenshot-2025-08-02-180519.png" alt="New Islands">
+        <p>What once stood as familiar ruins now rise as towering legends. In the upcoming release, structures across the realm have been completely overhauled—and with them, the dangers they hold.</p>
+        <p>Ancient pyramids have transformed into sprawling mega-dungeons filled with molten traps and cunning puzzles. Woodland Mansions now resemble actual haunted estates, packed with terrifying surprises, hidden chambers, and eerie lore scrawled on the walls. But it doesn’t stop there—new, mysterious buildings have started to appear in faraway biomes, guarded by powerful bosses who drop game-changing loot.</p>
+        <p>Exploration is no longer a side quest—it’s a challenge of wit, strength, and courage.</p>      </div>
+    </div>
+<hr style="border: none; border-top: 3px solid #000; margin: 0 0 0;" />
+
+    <div class="bottom-story">
+      <h3>WHEN IS THE RELEASE?</h3>
+      <hr style="border: none; border-top: 3px solid #000; margin: 0 0 6px;" />
+      <img src="https://i.postimg.cc/252Tz2cs/Screenshot-2025-08-02-184300.png" alt="Mystery">
+      <p>We hear you loud and clear—the release is <b>incredibly close</b>.</p>
+      <p>All that's left is to pack up, polish the final elements, and run a few last tests. Once we're confident everything is ready, <b>the official release date will be announced first on our Discord server</b></p>
+      <p>With this, <b>Bulletin 007 marks the end</b> of our Road to Release series. There will be <b>no more bulletins until the next update cycle begins</b>.</p>
+	<p>Until then, <b>thank you</b> for being part of this wild ride.</p>
+	<p><b>We’ll meet again—probably sooner than you think</b>.</p>
+    </div>
+<hr style="border: none; border-top: 3px solid #000; margin: 24px 0 8px;" />
+    <div class="extra-story">
+   <h3>🎬 THE WAIT IS OVER.</h3>
+   <hr style="border: none; border-top: 3px solid #000; margin: 0 0 6px;" />
+  <video autoplay muted loop>
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p><b>The long-awaited trailer has finally dropped.</b></p>
+  <p>Months of silence. Countless teasers. Endless theories.</p>
+  <p>And now… it’s real.</p>
+  <p>The official Game Trailer is here — revealing glimpses of what’s to come:</p>
+  <p>✨ Vast worlds.</p>
+  <p>⚔️ Legendary bosses.</p>
+  <p>🧭 New mechanics.</p>
+  <p>🔥 And a story that’s just beginning.</p>
+  <p>Grab your gear, mark your calendars, and prepare to enter the next chapter.</p>
+  <p><b>Watch it now. Share it. Decode it.</b></p>
+  <p>Because everything changes from this point forward.</p>
+</div>
+
+    <hr style="border: none; border-top: 3px solid #000; margin: 24px 0 8px;" />
+    <div style="text-align: center; font-style: italic; font-size: 10px; color: #DCC85D;">
+<div class="lightning-bulletin">
+  <video autoplay loop muted playsinline class="lightning-video">
+    <source src="https://files.catbox.moe/wa6665.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p class="lightning-text">See you after the release — this is the end… for now.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
